@@ -4,16 +4,11 @@ using System.Text;
 
 namespace _18_Mini_MUD
 {
-    class Apple : Item, IEat, IConsume
+    class Apple : Item, IEat
     {
         public int Kcal { get; set; }
         public Apple(string name, bool ifCollectable) : base(name, ifCollectable)
         {
-        }
-
-        public string Consume()
-        {
-            return Name;
         }
 
         public int Eat()

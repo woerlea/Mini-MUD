@@ -4,17 +4,10 @@ using System.Text;
 
 namespace _18_Mini_MUD
 {
-    class Weapon : Item, IConsume
+    class Weapon : Item 
     {
         public Weapon(string name, bool ifCollectable) : base(name, ifCollectable)
         {
         }
-
-        #region Methoden
-        public string Consume()
-        {
-            return Name; 
-        }
-        #endregion
     }
 }

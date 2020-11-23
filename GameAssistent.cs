@@ -19,7 +19,7 @@ namespace _18_Mini_MUD
         }
         #endregion
 
-        // Wie soll Universalgegenstand angewendet werden?
+        // Wie soll Universalgegenstand (Äpfel) angewendet werden?
         public void UseUniversalItem (Item item)
         {
             Console.WriteLine($"Wollen Sie {item.Name} [e]ssen oder [a]nwenden?");
@@ -65,7 +65,6 @@ namespace _18_Mini_MUD
                         if (soloItem is SportItem)
                         {                            
                             GiveDirektionToUseTheItem(soloItem);
-                            (soloItem as SportItem).Consume();
                             myPrinter.PrintFieldInfo();
                         }
                         if (soloItem is Food)
@@ -93,7 +92,6 @@ namespace _18_Mini_MUD
                         Item chosenItem = MyPlayer.myBackpack.ChooseItem(item);
                         if (chosenItem is Weapon)
                         {
-                            // (chosenItem as Weapon).Consume();
                             MyPlayer.UseWeapontToFight(chosenItem);
                         }
                         if (chosenItem is Food)
