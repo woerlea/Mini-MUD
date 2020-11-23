@@ -10,7 +10,7 @@ namespace _18_Mini_MUD
             Field start = new FreeEntryFields(0, "Start", Field.FieldType.START);
             start.Description = "Startfeld";
             Field markt = new FreeEntryFields(1, "Dornbirner Markt", Field.FieldType.NORMAL);
-            markt.Description = "Der Dornbirner Wochenmarkt liegt zentral vor der Martinskirche in der Fußgängerzone. Ein regionalverkäufer bietet bio Bodenseeäpfel an.";
+            markt.Description = "Der Dornbirner Wochenmarkt liegt zentral vor der Martinskirche in der Fußgängerzone. Ein Regionalverkäufer bietet bio Bodenseeäpfel an.";
             Field inatura = new Museum(2, "Inatura", Field.FieldType.NORMAL);
             inatura.Description = "Auflösung der Ausstellung 'Mittelalter: Natur, Kultur und Krieg'. Sie können einen Schwert als Souvenir mitnehmen.";
             Field ebnit = new Mountain(3, "Ebnit", Field.FieldType.NORMAL);
@@ -28,7 +28,7 @@ namespace _18_Mini_MUD
             Field dm = new FreeEntryFields(8, "DM Drogeriemarkt", Field.FieldType.NORMAL);
             dm.Description = "Ausverkauf von Schwimmflügel (Kosten: 5 Euro)";
             Field cafe21 = new FreeEntryFields(9, "Cafe 21", Field.FieldType.NORMAL);
-            cafe21.Description = "Café 21 is mehr als ein Café! Hier wird nicht nur Kaffe und Tee angeboten, sondern auch ein safteiger Steak...";
+            cafe21.Description = "Café 21 is mehr als ein Café! Hier wird nicht nur Kaffe und Tee angeboten, sondern auch ein saftiger Steak...";
             Field intersport = new FreeEntryFields(10, "Intersport", Field.FieldType.NORMAL);
             intersport.Description = "Intersprot Fischer in Dornbirn ist das grösste Sprotgeschäft in Vorarlberg. Sprotausrüstung zum Aktionspreis (15 Euro)";
             Field karren = new Mountain(11, "Karren", Field.FieldType.NORMAL);
@@ -36,7 +36,7 @@ namespace _18_Mini_MUD
             karren.IsPassable = false;
             (karren as Mountain).ItemNeededForMountain = "Ski";
             Field stadtbad = new Water(12, "Das Stadtbad", Field.FieldType.NORMAL);
-            stadtbad.Description = "das Dornbirner Stadthallenbad in einen besonderen Erlebnisraum mit allem, was ein Hallenbad sonst noch haben muss. Gesunde Aktivitäten verleihen mehr Energie (+15)";
+            stadtbad.Description = "Das Dornbirner Stadthallenbad in einen besonderen Erlebnisraum mit allem, was ein Hallenbad sonst noch haben muss. Gesunde Aktivitäten verleihen mehr Energie (+15)";
             (stadtbad as Water).ItemNeededToSwimm = "Schwimmflügel";
             stadtbad.IsPassable = false;
             Field bahnhof = new DangerousArea(13, "Dornbirner Bahnhof", Field.FieldType.NORMAL);
@@ -46,7 +46,7 @@ namespace _18_Mini_MUD
             boedele.IsPassable = false;
             (boedele as Mountain).ItemNeededForMountain = "Ski";
             Field spar = new FreeEntryFields(15, "Spar", Field.FieldType.NORMAL);
-            spar.Description = "Regionale, saisonale, Bio Lebensmittel, Eigene Manufaktur, Lebensmittelmarkt in Dornbirn. Grüne Apfel im Ausverkauf (10 Euro)";
+            spar.Description = "Regionale, saisonale, Bio Lebensmittel, eigene Manufaktur: Lebensmittelmarkt in Dornbirn. Grüne Apfel im Ausverkauf (10 Euro)";
             Field redDoor = new Door(16, "rote Tür", Field.FieldType.NORMAL,"111");
             redDoor.IsPassable = false;
             Field rotesHaus = new FreeEntryFields(17, "Rotes Haus", Field.FieldType.NORMAL);
@@ -94,7 +94,7 @@ namespace _18_Mini_MUD
             Item redKey = new Key("Schlüssel (rot)",true, "111");
             faerbegasse.Item = redKey;
 
-            Item redApple = new Apple("Äpfel (rot)",true);
+            Item redApple = new Apple("Apfel (rot)",true);
             markt.Item = redApple;
             redApple.Costs = 10;
             (redApple as Apple).Kcal = 25;           
@@ -123,7 +123,7 @@ namespace _18_Mini_MUD
             Item beer = new Food("Bier",false,30);
             mohren.Item = beer;
 
-            Item greenApple = new Apple("Äpfel (grün)",true);
+            Item greenApple = new Apple("Apfel (grün)",true);
             spar.Item = greenApple;
             greenApple.Costs = 10;
             (greenApple as Apple).Kcal = 15;

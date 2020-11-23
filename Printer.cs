@@ -51,7 +51,7 @@ namespace _18_Mini_MUD
             }
             if (Player.CurrentPosition.West != null)
             {
-                Console.WriteLine("Im Wester: " + Player.CurrentPosition.West.Name);
+                Console.WriteLine("Im Westen: " + Player.CurrentPosition.West.Name);
             }
             else
             {

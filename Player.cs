@@ -63,7 +63,7 @@ namespace _18_Mini_MUD
             return CurrentPosition;
         }
 
-        // Wenn das aktuelle Spielfeld das Gefährfeld ist, verwende ein Gegenstand, um sich zu verteidigen
+        // Wenn das aktuelle Spielfeld das Gefahrfeld ist, verwende ein Gegenstand, um sich zu verteidigen
         public void UseWeapontToFight(Item item)
         {
             if (CurrentPosition == (CurrentPosition as DangerousArea))
