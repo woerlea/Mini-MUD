@@ -28,9 +28,11 @@ namespace _18_Mini_MUD
             }
             else
             {
+                Console.ForegroundColor = ConsoleColor.Gray;
                 Console.WriteLine("/\\/\\/\\/\\/\\/\\/\\/\\");
                 Console.WriteLine("/\\/\\Ohne Bergausrüstung (hier: Ski!!) geht man nicht in die Berge...");
                 Console.WriteLine("/\\/\\/\\/\\/\\/\\/\\/\\");
+                Console.ResetColor();
                 return null;
             }
             

@@ -21,8 +21,10 @@ namespace _18_Mini_MUD
         public Field Enter()
         {
             if (IsPassable != true)
-            {               
-               Console.WriteLine("=====================\n==Du brauchst einen passenden Schlüssel==\n=====================");                    
+            {
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine("=====================\n==Du brauchst einen passenden Schlüssel==\n=====================");
+                Console.ResetColor();
                return null;
             }
             return this; 

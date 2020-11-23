@@ -163,7 +163,8 @@ namespace _18_Mini_MUD
             string answer = Console.ReadLine();
             myPrinter.PrintStatus();
             myPrinter.PrintFieldInfo();
-            
+
+
             while (answer == "")
             {
                 Console.WriteLine("Möchten Sie jetzt: [1]-laufen [2]-Rucksack überprüfen [3]-Status anschauen?");
@@ -315,7 +316,8 @@ namespace _18_Mini_MUD
                 {
                     Console.WriteLine($"**~Game over~**\nDer Player ist erschöpft... Energiestand: {MyPlayer.Energy}");
                     break;
-                }                
+                }
+                
             }          
         }
     }      

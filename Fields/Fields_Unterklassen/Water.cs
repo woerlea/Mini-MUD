@@ -27,9 +27,11 @@ namespace _18_Mini_MUD
             }
             else
             {
+                Console.ForegroundColor = ConsoleColor.Blue;
                 Console.WriteLine("~ . ~ . ~ . ~ . ~ . ~ . ~ . ~ .");
                 Console.WriteLine("\n~ . ~ .Ohne Schwimmflügel wäre es im Wasser zu gefährlich...");
                 Console.WriteLine("~ . ~ . ~ . ~ . ~ . ~ . ~ . ~ .");
+                Console.ResetColor();
                 return null;
             }           
         }

@@ -18,12 +18,17 @@ namespace _18_Mini_MUD
         public void PrintFieldInfo()
         {
             Console.WriteLine("*****************************");
-            Console.WriteLine($"Sie sind auf dem Feld: {Player.CurrentPosition.Number} | {Player.CurrentPosition.Name}\nBeschreibung: {Player.CurrentPosition.Description}");
+            Console.ForegroundColor = ConsoleColor.DarkGreen; // Die Schriftart soll grün sein
+            Console.Write($"Sie sind auf dem Feld: {Player.CurrentPosition.Number} |");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine($"{Player.CurrentPosition.Name}");
+            Console.ForegroundColor = ConsoleColor.DarkGreen; // Die Schriftfarbe soll dunkelgrün sein  
+            Console.WriteLine($"\nBeschreibung: {Player.CurrentPosition.Description}");
             if (Player.CurrentPosition.Item != null)
             {
                 Console.WriteLine($"Item: {Player.CurrentPosition.Item.Name}");
                 if (Player.CurrentPosition.Item.Costs > 0)
-                {
+                {                   
                     Console.WriteLine($"Kosten: {Player.CurrentPosition.Item.Costs} Euro");
                 }
                 if (Player.CurrentPosition.EntryPrice > 0)
@@ -65,24 +70,28 @@ namespace _18_Mini_MUD
             {
                 Console.WriteLine("Im Osten: Mauer");
             }
+            Console.ResetColor(); // Die Schriftfarbe wird wieder weiss
             Console.WriteLine("*****************************");
         }
 
         // Ausgabe des Rucksackinhalts
         public void PrintBackpackContent()
-        {            
+        {
+            Console.ForegroundColor = ConsoleColor.Red; // der Inhalt des Rucksacks soll rot gedruckt werden
             if (Player.myBackpack.GetAmountOfItemsInBackPack()>0)
-            {
+            {               
                 Console.WriteLine("Im Rucksack:");
                 foreach (Item item in Player.myBackpack.Content)
                 {
                     Console.WriteLine($"- {item.Name}");
+                    Console.ResetColor();
                 }
             }
             else
             {
                 Console.WriteLine("Im Rucksack\n...ist nichts..");
-            }            
+            }
+            Console.ResetColor(); // Farbenschrift aufheben
         }
 
         // Ausgabe Player Status
